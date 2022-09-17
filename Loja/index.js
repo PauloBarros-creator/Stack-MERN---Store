@@ -2,9 +2,10 @@
 const express = require('express')
 const morgan = require('morgan')
 const path = require('path')
-const route = require('./routes/task_routes.js')
+const route = require('./src/routes/task_routes.js')
 const app = express()
-const { mongoose } = require('./database.js')
+const { mongoose } = require('./src/database.js')
+
 // Settings
 app.set('port', process.env.PORT || 3000)
 //Middlewares: function that are executed before arrive to routes
