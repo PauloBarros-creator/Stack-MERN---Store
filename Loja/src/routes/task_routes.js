@@ -16,14 +16,15 @@ router.get('/:id', async (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-    const { name, price, description} = req.body
-    const produto = new produto({
-        name,
-        price,
-        description
-    })
-    console.log(produto)
-    await produto.save()
+
+    //const { name, price, description} = req.body
+    const object_produto = {
+        name: req.body.name,
+        price: req.body.price,
+        description: req.body.description
+    }
+    console.log(object_produto)
+    await produto.create (object_produto)
     res.json({status: 'Product saved'})
 })
 

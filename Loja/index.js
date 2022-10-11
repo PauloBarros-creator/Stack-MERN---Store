@@ -13,7 +13,7 @@ app.use(morgan('dev'))
 //Sempre que chegue um ficheiro isto verifica que seja um ficheiro json
 app.use(express.json())
 //Routes
-app.use('/api/tasks', route)
+app.use('/', route)
 //Static files
 app.use(express.static(path.join(__dirname, 'public')))
 //Starting the Server
